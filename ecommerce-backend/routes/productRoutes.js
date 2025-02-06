@@ -3,8 +3,6 @@ const multer = require('multer');
 const Product = require('../models/Product');
 const path = require('path');
 const router = express.Router();
-
-// Set up storage engine for Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads');
@@ -15,8 +13,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
-
-// Add new product
 router.post('/create-product', upload.single('image'), async (req, res) => {
   try {
     const { name, price, description, category, stock } = req.body;
@@ -31,7 +27,6 @@ router.post('/create-product', upload.single('image'), async (req, res) => {
   }
 });
 
-// Get all products
 router.get('/get-product', async (req, res) => {
   try {
     const products = await Product.find();
@@ -40,8 +35,6 @@ router.get('/get-product', async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
-// Get a single product by ID
 router.get('/:id', async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
@@ -53,8 +46,6 @@ router.get('/:id', async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
-// Update a product
 router.put('/:id', upload.single('image'), async (req, res) => {
   try {
     const { name, price, description, category, stock } = req.body;
@@ -76,7 +67,6 @@ router.put('/:id', upload.single('image'), async (req, res) => {
   }
 });
 
-// Delete a product
 router.delete('/:id', async (req, res) => {
   try {
     const deletedProduct = await Product.findByIdAndDelete(req.params.id);

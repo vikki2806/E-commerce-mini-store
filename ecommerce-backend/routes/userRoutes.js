@@ -3,7 +3,6 @@ const User = require('../models/User');
 
 const router = express.Router();
 
-// Create new user profile
 router.post('/', async (req, res) => {
   try {
     const { name, email, phone, address } = req.body;
@@ -16,7 +15,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Update user profile
 router.put('/:id', async (req, res) => {
   try {
     const { name, email, phone, address } = req.body;

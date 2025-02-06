@@ -1,5 +1,9 @@
 # E-commerce-mini-store
+# requirements
+ NodeJs: 16 +
+ npm  :   8+
 # how to run backend
+ 
   cd ecommerce-backend
   npm install 
   npm run dev
