@@ -1,0 +1,76 @@
+
+.profilenew{display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+background: var(--Color-Primary-100, #D1DFE9);
+
+}
+.profileoutbox{
+  display: flex;
+padding: 10px;
+align-items: center;
+gap: 16px;
+border-radius: 12px;
+background: var(--background-color, #F8F9F9);
+}
+input:focus {
+  outline:none !important;
+}
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none !important;
+
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+
+  resize: none !important; 
+}
+input {
+  /* border: none; */
+  overflow: auto;
+  /* outline: none !important; */
+
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+
+  resize: none !important; 
+}
+.dragdropoutbox{
+  cursor: pointer;
+  display: flex;
+padding: 4px 4px;
+flex-direction: column;
+align-items: center;
+gap: 3px;
+border-radius: 8px;
+border: 1px dashed var(--Color-Primary, #1C485F);
+}
+.dragdropoutbox:hover{
+  border: 1px dashed var(--Color-Primary, red);
+}
+.dragdropboxtetx{
+  color: #000;
+
+/* Typography/P4 */
+font-family: "Source Sans Pro";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+
+}
+.dragdropboxblutezxt{
+  margin-left: 2px;
+  color: var(--Color-Primary, #1C485F);
+/* Typography/P4 */
+font-family: "Source Sans Pro";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+
+}
